@@ -1,2 +1,1 @@
-# sekarcandra
-Testgojekpin
+TESTGOJEKPIN
