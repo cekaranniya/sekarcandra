@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("green","[]          SEWAAAAAA KODOK IJO 1/2                \n");
+echo color("green","[]          ABAH KAU GANTENG                \n");
 echo color("yellow","[]          JANDA TEAM BINJAI             \n");
 echo color("green","[]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
 echo color("yellow","[]         waiting proses.....           \n");
@@ -43,7 +43,7 @@ function change(){
         goto goride;
         }else{
         echo "\n".color("red","-] Message: ".$message);
-        echo "\n".color("yellow","!] Claim voc BUYUNG JTB");
+        echo "\n".color("yellow","!] Claim voc ASROCK");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
