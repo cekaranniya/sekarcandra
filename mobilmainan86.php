@@ -2,7 +2,7 @@
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
 echo color("green","[]          ABAH KAU GANTENG                \n");
-echo color("yellow","[]          JANDA TEAM BINJAI             \n");
+echo color("yellow","[]          RAILING DEPO             \n");
 echo color("green","[]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
 echo color("yellow","[]         waiting proses.....           \n");
 echo color("yellow","[] cara menulis nomor pakai 62xxxxxxxxxx \n");
@@ -30,13 +30,13 @@ function change(){
         $pilihan = trim(fgets(STDIN));
         if($pilihan == "y" || $pilihan == "Y"){
         echo color("red","===========(REDEEM VOUCHER)===========");
-        echo "\n".color("yellow","!] Claim voc COBAGOFOOD010420A");
+        echo "\n".color("yellow","!] Claim voc COBAGOFOOD0906");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(1);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"MAKANGOFOOD0906"}');
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD0906"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green","+] Message: ".$message);
@@ -50,14 +50,14 @@ function change(){
         sleep(1);
         }
         sleep(3);
-        $boba19 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"MAKANGOFOOD0906"}');
+        $boba19 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD0906"}');
         $messageboba19 = fetch_value($boba19,'"message":"','"');
         if(strpos($boba19, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messageboba19);
         goto goride;
         }else{
         echo "\n".color("red","-] Message: ".$messageboba19);
-        echo "\n".color("yellow","!] Claim voc COBAGOFOOD010420B");
+        echo "\n".color("yellow","!] Claim voc PAKEGOFOOD0906");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
@@ -72,14 +72,14 @@ function change(){
         }else{
         echo "\n".color("green","+] Message: ".$messageboba11);
         goride:
-        echo "\n".color("yellow","!] Claim voc COBAGOFOOD010420B");
+        echo "\n".color("yellow","!] Claim voc PAKAIGOFOOD0906");
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
         sleep(1);
         }
         sleep(3);
-        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"MAKANGOFOOD0906"}');
+        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PAKAIGOFOOD0906"}');
         $message1 = fetch_value($goride,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message1);
         sleep(3);
