@@ -34,7 +34,7 @@ function change(){
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(1);
+        sleep(3);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"RAMADHAN60"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -47,10 +47,10 @@ function change(){
         echo "\n".color("yellow","!] Please wait");
         for($a=1;$a<=3;$a++){
         echo color("yellow",".");
-        sleep(1);
-        }
         sleep(3);
-        $boba19 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"RAMADHAN60"}');
+        }
+        sleep(4);
+        $boba19 = request('/go-promotions/v3/promotions/enrollments', $token, '{"promo_code":"RAMADHAN60"}');
         $messageboba19 = fetch_value($boba19,'"message":"','"');
         if(strpos($boba19, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("green","+] Message: ".$messageboba19);
@@ -79,7 +79,7 @@ function change(){
         sleep(1);
         }
         sleep(3);
-        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PAKAIGOFOOD0906"}');
+        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"RAMADHAN60"}');
         $message1 = fetch_value($goride,'"message":"','"');
         echo "\n".color("green","+] Message: ".$message1);
         sleep(3);
